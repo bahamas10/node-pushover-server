@@ -122,6 +122,7 @@ function onrequest(req, res) {
       res.end('pong\n');
       break;
     case '/messages.json':
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.json(messagebuf.toarray());
       break;
     default:
