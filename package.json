@@ -1,6 +1,6 @@
 {
   "name": "pushover-server",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A webserver to expose pushover notifications",
   "main": "pushover-server.js",
   "dependencies": {
