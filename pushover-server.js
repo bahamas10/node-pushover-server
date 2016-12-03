@@ -54,7 +54,9 @@ if (config.cache) {
   } catch (e) {
     cache = [];
   }
-  cache.forEach(function (message) {
+  cache.sort(function (a, b) {
+    return a.date < b.date ? -1 : 1;
+  }).forEach(function (message) {
     messagebuf.enq(message);
   });
   console.log('loaded %d items from cache', cache.length);
